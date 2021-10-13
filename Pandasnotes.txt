@@ -1,0 +1,8 @@
+Pandas Series - 1 dimensional array, only one column, as many rows as you want
+Pandas Dataframe - 2 dimensional array, as many columns and as many rows as you want
+
+
+-Important to know the difference between a colon and a comma
+- ',' tells us the difference between a row and a column so we have to use [these brackets] NON-CONSECUTIVE
+    - must use brackets here for the comma
+- ':' means consecutive rows or columns- CONSECUTIVE
