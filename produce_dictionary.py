@@ -54,8 +54,10 @@ print(produce)
 
 print()
 print('#1 - Produce that had the highest and lowest sales in total sales (both name of produce and value) ------------------------------')
-#print(np.minimum(produce))
-
+print()
+print('Lowest Sales: ',produce.idxmin()['Total Sales'], produce.min()['Total Sales'])
+print('Highest Sales: ', produce.idxmax()['Total Sales'], produce.max()['Total Sales'])
+print()
 print('#2 - Using "loc", display the quantity and total sales for "Orange" and "Beets" together')
 print()
 print(produce.loc[['Orange','Beets'],'Quantity Sold':'Total Sales'])
@@ -81,3 +83,10 @@ print('Average Quantity Sold: ',produce['Quantity Sold'].mean())
 print()
 
 print('#6 - Create a new dataframe for only those produce that have sold between 11,500 to 12,000 (quantity)')
+print()
+newproduce = produce.loc[(produce['Quantity Sold'] >= 11500) & (produce['Quantity Sold'] <= 12000)]
+print(newproduce)
+
+print('#7 - What is the total sales for the products in the above new dataframe? (print out ONLY total sales)')
+
+print("Total Sales from New Dataframe", newproduce['Total Sales'].sum())
