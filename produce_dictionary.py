@@ -42,7 +42,7 @@ produce_dictionary = {'Potatoes': [0.86, 12219, 10508],
                       'Brussels sprouts': [1.65, 11947, 19713],
                       'Kale': [5.02, 12293, 61711],
                       'Bok choy': [1.42, 11565, 16422]}
-
+print()
 print('Created Data Frame -------------------------------------------------------------------------------------------------------------')
 print()
 produce = pd.DataFrame(produce_dictionary)
@@ -71,7 +71,7 @@ print()
 print('#4 - Using "at", update the quantity sold for Apricots to 11,955 and total sales to 44,353.05')
 print()
 produce.at['Apricots', 'Quantity Sold'] = 11955
-# is there a way to do this in one function?
+# is there a way to do this in one function? 
 produce.at['Apricots', 'Total Sales'] = 44353.05
 print(produce)
 print()
@@ -86,7 +86,9 @@ print('#6 - Create a new dataframe for only those produce that have sold between
 print()
 newproduce = produce.loc[(produce['Quantity Sold'] >= 11500) & (produce['Quantity Sold'] <= 12000)]
 print(newproduce)
+print()
 
 print('#7 - What is the total sales for the products in the above new dataframe? (print out ONLY total sales)')
-
-print("Total Sales from New Dataframe", newproduce['Total Sales'].sum())
+print()
+print("Total Sales from Products Above", newproduce['Total Sales'].sum())
+print()
